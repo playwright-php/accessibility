@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Accessibility Violations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .low-contrast {
+            background: #ffffff;
+            color: #cccccc;
+        }
+        .empty-button {
+            padding: 0.5rem 1rem;
+            background: #0066cc;
+            color: white;
+        }
+        .empty-link {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Page with Multiple Violations</h1>
+
+        <!-- Color contrast violation -->
+        <section>
+            <h2 class="low-contrast">Section Title with Low Contrast</h2>
+            <p class="low-contrast">This paragraph has insufficient color contrast.</p>
+        </section>
+
+        <!-- Missing alt text -->
+        <section>
+            <h2>Images</h2>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%23ff0000' width='200' height='100'/%3E%3C/svg%3E"
+                 class="banner-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%2300ff00' width='200' height='100'/%3E%3C/svg%3E">
+        </section>
+
+        <!-- Form without labels -->
+        <section>
+            <h2>Contact Form</h2>
+            <form>
+                <div>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div>
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <!-- Button without discernible text -->
+                <button type="submit" class="empty-button"></button>
+            </form>
+        </section>
+
+        <!-- Empty links -->
+        <section>
+            <h2>Navigation</h2>
+            <nav>
+                <a href="#" class="empty-link"></a>
+                <a href="#about" class="empty-link"> </a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </section>
+
+        <!-- Heading order skip -->
+        <section>
+            <h2>Content Section</h2>
+            <h4>This skips h3, which is a violation</h4>
+            <p>Content here.</p>
+        </section>
+    </main>
+</body>
+</html>

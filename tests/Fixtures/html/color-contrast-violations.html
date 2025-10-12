@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Contrast Issues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        /* Low contrast violations */
+        .low-contrast-1 {
+            background: #ffffff;
+            color: #cccccc; /* Too light on white */
+        }
+        .low-contrast-2 {
+            background: #ffff00;
+            color: #ffffff; /* White on yellow */
+        }
+        .low-contrast-3 {
+            background: #0066cc;
+            color: #0099ff; /* Light blue on dark blue */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Color Contrast Violations</h1>
+
+        <section>
+            <h2>Poor Contrast Examples</h2>
+            <p class="low-contrast-1">This text has insufficient contrast (light gray on white).</p>
+            <p class="low-contrast-2">This text has insufficient contrast (white on yellow).</p>
+            <p class="low-contrast-3">This text has insufficient contrast (light blue on dark blue).</p>
+        </section>
+    </main>
+</body>
+</html>

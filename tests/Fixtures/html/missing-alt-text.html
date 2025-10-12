@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Alt Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        img {
+            max-width: 200px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Images Without Alt Text</h1>
+
+        <section>
+            <h2>Violation Examples</h2>
+
+            <!-- Missing alt attribute entirely -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%23ff0000' width='200' height='100'/%3E%3C/svg%3E"
+                 class="logo">
+
+            <!-- Empty alt is only valid for decorative images in certain contexts -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%2300ff00' width='200' height='100'/%3E%3C/svg%3E"
+                 alt=""
+                 class="banner">
+
+            <!-- Another missing alt -->
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%230000ff' width='200' height='100'/%3E%3C/svg%3E"
+                 class="icon">
+        </section>
+
+        <section>
+            <h2>Correct Example</h2>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E%3Crect fill='%23333333' width='200' height='100'/%3E%3C/svg%3E"
+                 alt="Gray rectangle placeholder"
+                 class="proper-image">
+        </section>
+    </main>
+</body>
+</html>

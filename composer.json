@@ -1,0 +1,66 @@
+{
+    "name": "playwright-php/accessibility",
+    "description": "Accessibility testing for Playwright PHP using axe-core. Check web pages for WCAG compliance.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "playwright",
+        "accessibility",
+        "a11y",
+        "a11y-php",
+        "axe",
+        "axe-core",
+        "wcag",
+        "contrast-checker",
+        "testing",
+        "browser-testing"
+    ],
+    "authors": [
+        {
+            "name": "Simon André",
+            "email": "smn.andre@gmail.com",
+            "homepage": "https://github.com/smnandre"
+        },
+        {
+            "name": "Playwright PHP Contributors",
+            "homepage": "https://github.com/playwright-php"
+        }
+    ],
+    "homepage": "https://playwright-php.dev",
+    "require": {
+        "php": "^8.2",
+        "playwright-php/playwright": "dev-main"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.40",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^12.3"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Playwright\\Accessibility\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Playwright\\Accessibility\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.x-dev"
+        },
+        "thanks": {
+            "name": "playwright-php/playwright",
+            "url": "https://github.com/playwright-php/playwright"
+        }
+    }
+}
