@@ -17,14 +17,14 @@ concurrency:
 jobs:
 
   cs:
-    uses: playwright-php/.github/workflows/CS.yml@main
+    uses: playwright-php/.github/.github/workflows/CS.yml@main
     # with:
       # php-version: '8.4'
       # composer-validate: true
       # php-cs-fixer-args: '--diff --dry-run'
 
   sa:
-    uses: playwright-php/.github/workflows/SA.yml@main
+    uses: playwright-php/.github/.github/workflows/SA.yml@main
     # with:
       # php-version: '8.4'
       # phpstan-args: 'analyse --no-progress --memory-limit=-1'
