@@ -10,11 +10,6 @@
 
 # Playwright PHP - Accessibility
 
-> [!IMPORTANT]  
-> This package is **experimental**. Its API may still change before the upcoming `1.0` release.  
->  
-> Curious or interested? Try it out, [share your feedback](https://github.com/playwright-php/accessibility/issues), or ideas!
-
 Perform real **accessibility audits** on web pages using [Playwright PHP](https://github.com/playwright-php/playwright) and [axe-core](https://github.com/dequelabs/axe-core),  
 checking for **WCAG**, **ARIA**, color contrast, and best-practice compliance.
 
